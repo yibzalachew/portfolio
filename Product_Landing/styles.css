@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+#header-img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#header-label {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    flex: 1;
+}
+
+#nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-bar li {
+    margin-right: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f0f0f0;
+}
+
+section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#email {
+    padding: 12px;
+    margin: 12px 0;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#email:focus {
+    border-color: #333;
+}
+
+#submit {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #logo-container {
+        margin-bottom: 15px;
+    }
+
+    #header-label {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    #header-img {
+        width: 50px;
+    }
+
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-bar li {
+        margin-bottom: 10px;
+    }
+
+    #email, #submit {
+        width: 90%;
+    }
+}
+
+.guitar-box {
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guitar-box h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.guitar-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.guitar-column {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guitar-column h3 {
+    color: #333;
+}
+
+.guitar-column p {
+    margin: 12px 0;
+}
+
+.guitar-column .price {
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.guitar-column .features, .guitar-column .best-for {
+    font-style: italic;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#video {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+section p, section span {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .guitar-content {
+        flex-direction: column;
+    }
+
+    .guitar-column {
+        margin-bottom: 20px;
+    }
+
+    .guitar-box {
+        padding: 20px;
+    }
+}

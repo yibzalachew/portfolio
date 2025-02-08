@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b32;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #2c2c4c;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #f2f2f2;
+    font-size: 36px;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+#types span {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+#stats-table {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#stats-table td, #stats-table th {
+    padding: 10px;
+    border: 1px solid #fff; /* Added table lines */
+}
+
+#stats-table td:first-child {
+    font-weight: bold;
+}
+
+img {
+    margin-top: 20px;
+    max-width: 200px;
+}
+
+h2 {
+    color: #f2f2f2;
+    font-size: 24px;
+    margin-top: 20px;
+}
