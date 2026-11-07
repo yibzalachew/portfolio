@@ -1,20 +1,21 @@
 ﻿
-// =========================================
-// 1. MOBILE NAVIGATION
-// =========================================
+/* =========================================
+   1. MOBILE NAVIGATION
+========================================= */
 
 const menuToggle = document.getElementById('menu-toggle');
 const navigation = document.getElementById('main-navigation');
 
 if (menuToggle && navigation) {
 
-    menuToggle.addEventListener('click', function () {
+    // Open and close mobile navigation
+    menuToggle.addEventListener('click', function (event) {
 
-        navigation.classList.toggle('active');
+        event.stopPropagation();
 
-        const isOpen = navigation.classList.contains('active');
+        const isOpen = navigation.classList.toggle('active');
 
-        menuToggle.setAttribute('aria-expanded', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
 
         menuToggle.setAttribute(
             'aria-label',
@@ -27,21 +28,15 @@ if (menuToggle && navigation) {
 
     });
 
-
-    // Close mobile menu after clicking a navigation link.
-
-    navigation.querySelectorAll('a').forEach(link => {
+    // Close menu after clicking a navigation link
+    navigation.querySelectorAll('.nav-link').forEach(link => {
 
         link.addEventListener('click', function () {
 
             navigation.classList.remove('active');
 
             menuToggle.setAttribute('aria-expanded', 'false');
-
-            menuToggle.setAttribute(
-                'aria-label',
-                'Open navigation menu'
-            );
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
 
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 
@@ -49,9 +44,7 @@ if (menuToggle && navigation) {
 
     });
 
-
-    // Close mobile menu when clicking outside.
-
+    // Close menu when clicking outside
     document.addEventListener('click', function (event) {
 
         if (
@@ -62,11 +55,7 @@ if (menuToggle && navigation) {
             navigation.classList.remove('active');
 
             menuToggle.setAttribute('aria-expanded', 'false');
-
-            menuToggle.setAttribute(
-                'aria-label',
-                'Open navigation menu'
-            );
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
 
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 
@@ -74,9 +63,7 @@ if (menuToggle && navigation) {
 
     });
 
-
-    // Close mobile menu when screen becomes larger.
-
+    // Close menu when switching to desktop screen size
     window.addEventListener('resize', function () {
 
         if (window.innerWidth > 768) {
@@ -84,11 +71,7 @@ if (menuToggle && navigation) {
             navigation.classList.remove('active');
 
             menuToggle.setAttribute('aria-expanded', 'false');
-
-            menuToggle.setAttribute(
-                'aria-label',
-                'Open navigation menu'
-            );
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
 
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 
@@ -99,30 +82,31 @@ if (menuToggle && navigation) {
 }
 
 
-// =========================================
-// 2. SMOOTH SCROLLING
-// =========================================
+/* =========================================
+   2. SMOOTH SCROLLING
+========================================= */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
 
     anchor.addEventListener('click', function (event) {
 
         const targetId = this.getAttribute('href');
 
-        if (!targetId || targetId === '#') {
-            return;
-        }
+        if (targetId && targetId.startsWith('#')) {
 
-        const targetElement = document.querySelector(targetId);
+            const targetSection = document.querySelector(targetId);
 
-        if (targetElement) {
+            if (targetSection) {
 
-            event.preventDefault();
+                event.preventDefault();
 
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+            }
 
         }
 
@@ -131,27 +115,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// =========================================
-// 3. ACTIVE NAVIGATION LINK
-// =========================================
+// Smooth scrolling for internal project links
+document.querySelectorAll('.project-card a').forEach(anchor => {
 
-const sections = document.querySelectorAll(
-    '#home, #about, #skills, #projects, #contact'
-);
+    anchor.addEventListener('click', function (event) {
 
-const navLinks = document.querySelectorAll(
-    '.main-navigation .nav-link'
-);
+        const targetId = this.getAttribute('href');
+
+        if (targetId && targetId.startsWith('#')) {
+
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+
+                event.preventDefault();
+
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+            }
+
+        }
+
+    });
+
+});
+
+
+/* =========================================
+   3. ACTIVE NAVIGATION HIGHLIGHTING
+========================================= */
+
+const sections = document.querySelectorAll('main section');
+
+const navLinks = document.querySelectorAll('.main-navigation .nav-link');
 
 function updateActiveNavigation() {
 
-    let currentSection = 'home';
+    let currentSection = '';
 
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
 
-        if (window.scrollY >= sectionTop - 150) {
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
 
             currentSection = section.getAttribute('id');
 
@@ -173,22 +186,22 @@ function updateActiveNavigation() {
 
 }
 
+
+// Update active navigation while scrolling
 window.addEventListener('scroll', updateActiveNavigation);
 
+// Set correct active link when page loads
 window.addEventListener('load', updateActiveNavigation);
 
 
-// =========================================
-// 4. CURRENT YEAR IN FOOTER
-// =========================================
+/* =========================================
+   4. AUTOMATIC FOOTER YEAR
+========================================= */
 
-const footerText = document.querySelector('.footer-container p');
+const currentYear = document.getElementById('current-year');
 
-if (footerText) {
+if (currentYear) {
 
-    footerText.innerHTML =
-        `&copy; ${new Date().getFullYear()} Yibzalachew Seifu. All Rights Reserved.`;
+    currentYear.textContent = new Date().getFullYear();
 
 }
-document.getElementById("current-year").textContent =
-    new Date().getFullYear();

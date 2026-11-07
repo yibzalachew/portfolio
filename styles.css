@@ -983,9 +983,10 @@ button {
     .main-navigation {
         display: none;
 
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
 
         width: 100%;
         z-index: 1001;
@@ -1176,6 +1177,7 @@ button {
     .projects-grid .project-card > img {
         height: 210px;
     }
+
 
     /* Footer */
 
