@@ -1,0 +1,2879 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+a {
+    color: #1f4e78;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 2. Main layout */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    color: #1f4e78;
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.page-header p {
+    color: #666;
+}
+
+/* 3. Navigation */
+.navbar {
+    background: #1f4e78;
+    padding: 14px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: white;
+    padding: 8px 11px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background: #163a5a;
+    text-decoration: none;
+}
+
+/* 4. Cards and panels */
+.card,
+.panel {
+    background: white;
+    border-radius: 8px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h2,
+.panel h2 {
+    color: #1f4e78;
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    border-left: 4px solid #1f4e78;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card h3 {
+    margin-bottom: 8px;
+    color: #1f4e78;
+}
+
+/* 5. Forms */
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1f4e78;
+    box-shadow: 0 0 0 2px rgba(31, 78, 120, 0.12);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* 6. Buttons */
+.btn,
+button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #1f4e78;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover,
+button:hover {
+    background: #163a5a;
+    text-decoration: none;
+}
+
+.btn-success {
+    background: #218838;
+}
+
+.btn-success:hover {
+    background: #176b2c;
+}
+
+.btn-danger {
+    background: #c82333;
+}
+
+.btn-danger:hover {
+    background: #a71d2a;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+/* 7. Tables */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 11px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #1f4e78;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tbody tr:hover {
+    background: #eef3f8;
+}
+
+/* 8. Status labels */
+.status {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-ok,
+.status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-low,
+.status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* 9. Messages and alerts */
+.alert {
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* 10. Login page */
+.login-container {
+    width: 90%;
+    max-width: 420px;
+    margin: 70px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 9px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #1f4e78;
+    margin-bottom: 25px;
+}
+
+.login-container button {
+    width: 100%;
+}
+
+/* 11. Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-danger {
+    color: #c82333;
+}
+
+.text-success {
+    color: #218838;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* 12. Footer */
+.footer {
+    margin-top: 35px;
+    padding: 18px;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+/* 13. Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 18px auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 7px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .panel {
+        padding: 15px;
+    }
+
+    .login-container {
+        margin: 35px auto;
+    }
+}
+
+/* Login page improvements */
+
+body:has(.login-container) {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.login-container h1 {
+    font-size: 23px;
+    text-align: center;
+}
+
+.login-container > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-container .footer {
+    line-height: 1.5;
+}
+
+
+/* Material registration form */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.form-grid .form-group {
+    margin-bottom: 0;
+}
+
+.form-grid input {
+    width: 100%;
+}
+
+/* Dashboard and page navigation */
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar .brand h2 {
+    margin-bottom: 5px;
+}
+
+.navbar .brand p {
+    margin: 0;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .navbar .container {
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Supplier page */
+
+.count {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.form-grid .form-group {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .count {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+}
+
+/* Delivery page */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.grid .form-group {
+    margin-bottom: 0;
+}
+
+.section-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: -12px;
+    margin-bottom: 20px;
+}
+
+.table-container table {
+    min-width: 950px;
+}
+
+.table-container th {
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Allocation page */
+.section-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.table-container table {
+    min-width: 800px;
+}
+
+@media (max-width: 600px) {
+    .table-container table {
+        min-width: 750px;
+    }
+}
+/* Material usage page */
+.section-description {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.table-container table {
+    min-width: 900px;
+}
+/* Wastage tracking page */
+.page-description {
+    color: #68778a;
+    margin-bottom: 22px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    background: #243b53;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.message {
+    padding: 13px 16px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+.message.success {
+    background: #e6f6ed;
+    color: #176b3a;
+}
+
+.message.error {
+    background: #fdeaea;
+    color: #a12626;
+}
+
+.hint {
+    color: #68778a;
+    font-size: 13px;
+    margin: 16px 0;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-wrap table {
+    min-width: 850px;
+}
+
+.approve-btn,
+.reject-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.approve-btn {
+    background: #219653;
+}
+
+.reject-btn {
+    background: #d64545;
+}
+
+@media (max-width: 700px) {
+    .panel {
+        padding: 16px;
+    }
+}
+/* Wastage page */
+
+.wastage-page .page-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.wastage-page .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.wastage-page .table-container table {
+    min-width: 800px;
+}
+
+@media (max-width: 600px) {
+    .wastage-page .table-container table {
+        min-width: 750px;
+    }
+}
+/* =========================================
+   REPORTS PAGE
+   Construction Material Management System
+========================================= */
+
+/* 1. Main reports layout */
+
+.reports-page {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. BLUE HEADER AND NAVIGATION
+   Same design as Allocation page
+========================================= */
+
+.navbar {
+    background: #1f4e78;
+    padding: 14px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.navbar .brand h2 {
+    color: white;
+    font-size: 19px;
+    margin: 0;
+}
+
+.navbar .brand p {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    padding: 8px 11px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+    background: #163a5a;
+    text-decoration: none;
+}
+
+/* =========================================
+   3. REPORTS PAGE HEADER
+========================================= */
+
+.reports-page .page-header {
+    margin-bottom: 25px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.reports-page .page-header h1 {
+    color: #1f4e78;
+    margin-bottom: 8px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.reports-page .page-header p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+}
+
+/* =========================================
+   4. PANELS AND CARDS
+========================================= */
+
+.reports-page .panel {
+    background: white;
+    border-radius: 8px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.reports-page .panel h2 {
+    color: #1f4e78;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   5. DATE FILTER FORM
+========================================= */
+
+.reports-page .report-filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.reports-page .report-filter-form .form-group {
+    margin-bottom: 0;
+}
+
+.reports-page .report-filter-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: bold;
+}
+
+.reports-page .report-filter-form input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+}
+
+.reports-page .report-filter-form input:focus {
+    outline: none;
+    border-color: #1f4e78;
+    box-shadow: 0 0 0 2px rgba(31, 78, 120, 0.12);
+}
+
+/* =========================================
+   6. REPORT BUTTONS
+========================================= */
+
+.reports-page .btn,
+.reports-page button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #1f4e78;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.reports-page .btn:hover,
+.reports-page button:hover {
+    background: #163a5a;
+    text-decoration: none;
+}
+
+.reports-page .btn-success {
+    background: #218838;
+}
+
+.reports-page .btn-success:hover {
+    background: #176b2c;
+}
+
+.reports-page .btn-secondary {
+    background: #6c757d;
+}
+
+.reports-page .btn-secondary:hover {
+    background: #545b62;
+}
+
+.reports-page .report-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* =========================================
+   7. SUMMARY CARDS
+========================================= */
+
+.reports-page .report-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.reports-page .summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1f4e78;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    min-width: 0;
+}
+
+.reports-page .summary-card h3 {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.reports-page .summary-card .summary-value {
+    color: #1f4e78;
+    font-size: 23px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.reports-page .summary-card p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Summary card colors */
+
+.reports-page .summary-card.pending {
+    border-left-color: #e0a800;
+}
+
+.reports-page .summary-card.approved {
+    border-left-color: #218838;
+}
+
+.reports-page .summary-card.rejected {
+    border-left-color: #c82333;
+}
+
+/* =========================================
+   8. SECTION DESCRIPTIONS
+========================================= */
+
+.reports-page .section-description {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.reports-page .report-note {
+    color: #64748b;
+    font-size: 13px;
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   9. REPORT TABLES
+========================================= */
+
+.reports-page .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+}
+
+.reports-page .table-container table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    background: white;
+}
+
+.reports-page .table-container th,
+.reports-page .table-container td {
+    padding: 11px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.reports-page .table-container th {
+    background: #1f4e78;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.reports-page .table-container tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.reports-page .table-container tbody tr:hover {
+    background: #eef3f8;
+}
+
+/* Low stock table */
+
+.reports-page .low-stock-table {
+    min-width: 650px;
+}
+
+/* =========================================
+   10. STATUS LABELS
+========================================= */
+
+.reports-page .status {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.reports-page .status-low {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.reports-page .status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.reports-page .status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.reports-page .status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* =========================================
+   11. ALERT MESSAGES
+========================================= */
+
+.reports-page .alert {
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+
+.reports-page .alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.reports-page .alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.reports-page .alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* =========================================
+   12. REPORT FOOTER
+========================================= */
+
+.reports-page .footer {
+    margin-top: 35px;
+    padding: 18px;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+.reports-page .footer p {
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   13. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .reports-page {
+        width: 95%;
+        margin: 18px auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .navbar .nav-links a {
+        padding: 7px;
+    }
+
+    .reports-page .page-header h1 {
+        font-size: 23px;
+    }
+
+    .reports-page .report-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .reports-page .summary-card {
+        padding: 15px;
+    }
+
+    .reports-page .summary-card .summary-value {
+        font-size: 19px;
+    }
+
+    .reports-page .panel {
+        padding: 15px;
+    }
+
+    .reports-page .report-actions {
+        flex-direction: column;
+    }
+
+    .reports-page .report-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .reports-page .report-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reports-page .page-header h1 {
+        font-size: 21px;
+    }
+
+    .reports-page .report-filter-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   14. PRINT AND SAVE AS PDF
+========================================= */
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+        font-size: 11px;
+    }
+
+    .navbar,
+    .report-filter-form,
+    .report-actions,
+    .reports-page .footer {
+        display: none !important;
+    }
+
+    .reports-page {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .reports-page .panel,
+    .reports-page .summary-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+
+    .reports-page .table-container {
+        overflow: visible;
+    }
+
+    .reports-page .table-container table {
+        min-width: 0;
+        width: 100%;
+        font-size: 9px;
+    }
+
+    .reports-page .table-container th,
+    .reports-page .table-container td {
+        padding: 5px;
+    }
+
+    .reports-page .table-container th {
+        background: #eee !important;
+        color: black !important;
+    }
+
+    .reports-page .page-header h1 {
+        color: black;
+    }
+}
+/* =========================================
+   WASTAGE TRACKING PAGE
+========================================= */
+
+/* 1. Main layout */
+
+.wastage-page {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. BLUE HEADER AND NAVIGATION
+   Same design as Allocation and Reports
+========================================= */
+
+.navbar {
+    background: #1f4e78;
+    padding: 14px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.navbar .brand h2 {
+    color: white;
+    font-size: 19px;
+    margin: 0;
+}
+
+.navbar .brand p {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    padding: 8px 11px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+    background: #163a5a;
+    text-decoration: none;
+}
+
+/* =========================================
+   3. PAGE HEADER
+========================================= */
+
+.wastage-page .page-header {
+    margin-bottom: 20px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.wastage-page .page-header h1 {
+    color: #1f4e78;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.wastage-page .page-header p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =========================================
+   4. USER INFORMATION
+========================================= */
+
+.wastage-page .user-info {
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.wastage-page .role-label {
+    display: inline-block;
+    background: #e8eef5;
+    color: #1f4e78;
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin-left: 7px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* =========================================
+   5. FEEDBACK MESSAGES
+========================================= */
+
+.wastage-page .wastage-message {
+    padding: 13px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.wastage-page .wastage-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.wastage-page .wastage-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* =========================================
+   6. SUMMARY CARDS
+========================================= */
+
+.wastage-page .wastage-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.wastage-page .summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1f4e78;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    min-width: 0;
+}
+
+.wastage-page .summary-label {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.wastage-page .summary-card strong {
+    color: #1f4e78;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.wastage-page .pending-card {
+    border-left-color: #e0a800;
+}
+
+.wastage-page .approved-card {
+    border-left-color: #218838;
+}
+
+.wastage-page .rejected-card {
+    border-left-color: #c82333;
+}
+
+/* =========================================
+   7. PANELS
+========================================= */
+
+.wastage-page .wastage-panel {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.wastage-page .panel-heading {
+    margin-bottom: 20px;
+}
+
+.wastage-page .panel-heading h2 {
+    color: #1f4e78;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.wastage-page .panel-heading p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================================
+   8. WASTAGE FORM
+========================================= */
+
+.wastage-page .wastage-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.wastage-page .form-group {
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+.wastage-page .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.wastage-page .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+.wastage-page .form-group input,
+.wastage-page .form-group select,
+.wastage-page .form-group textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+    color: #333;
+}
+
+.wastage-page .form-group input:focus,
+.wastage-page .form-group select:focus,
+.wastage-page .form-group textarea:focus {
+    outline: none;
+    border-color: #1f4e78;
+    box-shadow: 0 0 0 2px rgba(31, 78, 120, 0.12);
+}
+
+.wastage-page .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* =========================================
+   9. FORM INFORMATION NOTE
+========================================= */
+
+.wastage-page .wastage-note {
+    background: #eef3f8;
+    border-left: 4px solid #1f4e78;
+    padding: 13px 15px;
+    color: #475569;
+    border-radius: 5px;
+    margin: 15px 0 20px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   10. SUBMIT BUTTON
+========================================= */
+
+.wastage-page .wastage-submit-btn {
+    display: inline-block;
+    background: #1f4e78;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.wastage-page .wastage-submit-btn:hover {
+    background: #163a5a;
+}
+
+/* =========================================
+   11. WASTAGE TABLE
+========================================= */
+
+.wastage-page .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+}
+
+.wastage-page .wastage-table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+    background: white;
+}
+
+.wastage-page .wastage-table th,
+.wastage-page .wastage-table td {
+    padding: 11px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.wastage-page .wastage-table th {
+    background: #1f4e78;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.wastage-page .wastage-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.wastage-page .wastage-table tbody tr:hover {
+    background: #eef3f8;
+}
+
+.wastage-page .reason-cell {
+    min-width: 180px;
+    max-width: 250px;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   12. STATUS BADGES
+========================================= */
+
+.wastage-page .status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wastage-page .status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.wastage-page .status-badge.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.wastage-page .status-badge.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* =========================================
+   13. APPROVE AND REJECT BUTTONS
+========================================= */
+
+.wastage-page .review-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.wastage-page .approve-btn,
+.wastage-page .reject-btn {
+    border: none;
+    padding: 8px 11px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.wastage-page .approve-btn {
+    background: #218838;
+}
+
+.wastage-page .approve-btn:hover {
+    background: #176b2c;
+}
+
+.wastage-page .reject-btn {
+    background: #c82333;
+}
+
+.wastage-page .reject-btn:hover {
+    background: #a71d2a;
+}
+
+.wastage-page .review-complete {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* =========================================
+   14. EMPTY STATE
+========================================= */
+
+.wastage-page .empty-state {
+    background: #f8f9fa;
+    padding: 25px;
+    text-align: center;
+    border-radius: 6px;
+    color: #64748b;
+    border: 1px dashed #ccc;
+}
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+.wastage-page .wastage-footer {
+    margin-top: 35px;
+    padding: 18px;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+/* =========================================
+   16. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .wastage-page {
+        width: 95%;
+        margin: 18px auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .navbar .nav-links a {
+        padding: 7px;
+    }
+
+    .wastage-page .page-header h1 {
+        font-size: 23px;
+    }
+
+    .wastage-page .wastage-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .wastage-page .summary-card {
+        padding: 15px;
+    }
+
+    .wastage-page .summary-card strong {
+        font-size: 21px;
+    }
+
+    .wastage-page .wastage-panel {
+        padding: 15px;
+    }
+
+    .wastage-page .wastage-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wastage-page .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .wastage-page .wastage-submit-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .wastage-page .wastage-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .wastage-page .page-header h1 {
+        font-size: 21px;
+    }
+
+    .wastage-page .review-form {
+        flex-direction: column;
+    }
+
+    .wastage-page .approve-btn,
+    .wastage-page .reject-btn {
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   17. PRINT SETTINGS
+========================================= */
+
+@media print {
+
+    .navbar,
+    .wastage-page .wastage-form,
+    .wastage-page .review-form,
+    .wastage-page .wastage-submit-btn {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .wastage-page {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .wastage-page .wastage-panel,
+    .wastage-page .summary-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+
+    .wastage-page .table-container {
+        overflow: visible;
+    }
+
+    .wastage-page .wastage-table {
+        min-width: 0;
+        width: 100%;
+        font-size: 8px;
+    }
+
+    .wastage-page .wastage-table th,
+    .wastage-page .wastage-table td {
+        padding: 5px;
+    }
+
+}
+
+/* =========================================
+   STOCK BALANCE REPORT PAGE
+========================================= */
+
+.stock-page {
+    background: #f4f6f9;
+}
+
+.stock-page-content {
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+.stock-page .page-header {
+    background: transparent;
+    padding: 10px 0 20px;
+    margin-bottom: 15px;
+    box-shadow: none;
+}
+
+.stock-page .page-header h1 {
+    color: #17324d;
+    margin-bottom: 8px;
+}
+
+.stock-page .page-header p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Summary cards */
+
+.stock-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stock-summary-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e4e9f0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.stock-card-label {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.stock-summary-card strong {
+    display: block;
+    color: #1f4e78;
+    font-size: 25px;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.stock-summary-card small {
+    color: #8793a2;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.stock-summary-card.warning-card {
+    border-left: 4px solid #dc8b22;
+}
+
+.stock-summary-card.warning-card strong {
+    color: #b45309;
+}
+
+/* Main stock panel */
+
+.stock-page .stock-panel {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stock-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stock-section-heading h2 {
+    color: #17324d;
+    font-size: 20px;
+    margin: 0 0 7px;
+}
+
+.stock-section-heading p {
+    color: #7b8794;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Stock table */
+
+.stock-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.stock-table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+}
+
+.stock-table th {
+    background: #1f4e78;
+    color: #ffffff;
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.stock-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e8edf2;
+    color: #44546a;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.stock-table tbody tr:hover {
+    background: #f5f8fc;
+}
+
+.stock-table .stock-material-name {
+    font-weight: 600;
+    color: #1f3b57;
+}
+
+.stock-table .stock-balance {
+    font-weight: 700;
+    color: #1f4e78;
+}
+
+.empty-stock {
+    text-align: center;
+    padding: 30px !important;
+    color: #7b8794 !important;
+}
+
+/* Stock status */
+
+.stock-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.stock-status.low {
+    background: #fee2e2;
+    color: #b42318;
+}
+
+.stock-status.normal {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+/* Explanation note */
+
+.stock-note {
+    margin-top: 22px;
+    padding: 18px;
+    background: #eef4fb;
+    border-left: 4px solid #1f4e78;
+    border-radius: 7px;
+    line-height: 1.6;
+}
+
+.stock-note h3 {
+    margin: 0 0 12px;
+    color: #17324d;
+    font-size: 16px;
+}
+
+.stock-note p {
+    margin: 7px 0;
+    color: #526274;
+    font-size: 13px;
+}
+
+.stock-warning-note {
+    margin-top: 14px !important;
+    padding-top: 12px;
+    border-top: 1px solid #d5e1ee;
+}
+
+/* Footer */
+
+.stock-footer {
+    text-align: center;
+    color: #8994a3;
+    font-size: 12px;
+    padding: 22px 10px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .stock-page-content {
+        padding: 15px 12px;
+    }
+
+    .stock-page .stock-panel {
+        padding: 14px;
+    }
+
+    .stock-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .stock-summary-card {
+        padding: 15px;
+    }
+
+    .stock-summary-card strong {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 450px) {
+    .stock-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Stock report printing */
+
+@media print {
+    .stock-page .navbar,
+    .stock-footer {
+        display: none !important;
+    }
+
+    .stock-page {
+        background: #ffffff;
+    }
+
+    .stock-page-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .stock-page .stock-panel,
+    .stock-summary-card {
+        box-shadow: none;
+    }
+
+    .stock-table {
+        min-width: 0;
+        font-size: 9px;
+    }
+
+    .stock-table th,
+    .stock-table td {
+        padding: 6px 4px;
+        color: #000000;
+    }
+
+    .stock-table th {
+        background: #eeeeee !important;
+        color: #000000 !important;
+        print-color-adjust: exact;
+    }
+
+    .stock-table tr {
+        break-inside: avoid;
+    }
+}
+
+/* =========================================
+   MATERIAL MANAGEMENT PAGE
+========================================= */
+
+.materials-page {
+    background: #f4f6f9;
+}
+
+.materials-page-content {
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+.materials-page .page-header {
+    background: transparent;
+    padding: 10px 0 20px;
+    margin-bottom: 15px;
+    box-shadow: none;
+}
+
+.materials-page .page-header h1 {
+    color: #17324d;
+    margin-bottom: 8px;
+}
+
+.materials-page .page-header p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Form panel */
+
+.materials-form-card,
+.materials-table-card {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.materials-form-card h2,
+.materials-table-card h2 {
+    color: #17324d;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.materials-description {
+    color: #7b8794;
+    font-size: 13px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.materials-page .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.materials-page .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.materials-page .form-group label {
+    color: #34465a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.materials-page .form-group input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d5dce5;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #263238;
+    font-size: 14px;
+}
+
+.materials-page .form-group input:focus {
+    outline: none;
+    border-color: #1f4e78;
+    box-shadow: 0 0 0 3px rgba(31, 78, 120, 0.10);
+}
+
+.materials-form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.materials-form-actions .btn {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Table heading */
+
+.materials-table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.materials-table-heading p {
+    color: #7b8794;
+    font-size: 13px;
+    margin: 5px 0 0;
+}
+
+/* Materials table */
+
+.materials-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.materials-table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+}
+
+.materials-table th {
+    background: #1f4e78;
+    color: #ffffff;
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.materials-table td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e8edf2;
+    color: #44546a;
+    font-size: 13px;
+}
+
+.materials-table tbody tr:hover {
+    background: #f5f8fc;
+}
+
+.materials-table .materials-name {
+    color: #1f3b57;
+    font-weight: 600;
+}
+
+.materials-empty {
+    text-align: center;
+    padding: 25px !important;
+    color: #7b8794 !important;
+}
+
+/* Edit button */
+
+.materials-edit-btn {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #1f4e78;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.materials-edit-btn:hover {
+    background: #163a5b;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+    .materials-page-content {
+        padding: 15px 12px;
+    }
+
+    .materials-form-card,
+    .materials-table-card {
+        padding: 16px;
+    }
+
+    .materials-page .form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .materials-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .materials-form-actions .btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   MATERIAL DELETE BUTTON
+========================================= */
+
+.materials-action-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.materials-delete-form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.materials-delete-btn {
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.materials-delete-btn:hover {
+    background: #b02a37;
+}
+
+.materials-delete-btn:focus {
+    outline: 2px solid #dc3545;
+    outline-offset: 2px;
+}
+
+.materials-delete-btn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+    .materials-action-cell {
+        gap: 6px;
+    }
+
+    .materials-delete-btn {
+        padding: 7px 11px;
+    }
+}
+
+/* =========================================
+   SUPPLIERS PAGE
+========================================= */
+
+.suppliers-page {
+    background: #f4f6f9;
+}
+
+.suppliers-page-content {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.suppliers-page .page-header {
+    background: transparent;
+    padding: 10px 0 20px;
+    margin-bottom: 15px;
+}
+
+.suppliers-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.suppliers-form-card,
+.suppliers-table-card {
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.suppliers-form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.suppliers-table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.suppliers-table-heading h2 {
+    margin-bottom: 5px;
+}
+
+.suppliers-table-heading p {
+    color: #666;
+    font-size: 14px;
+}
+
+.suppliers-table-container {
+    overflow-x: auto;
+}
+
+.suppliers-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+.suppliers-table th {
+    background: #1f4e78;
+    color: #fff;
+    padding: 13px;
+    text-align: left;
+}
+
+.suppliers-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.suppliers-table tbody tr:hover {
+    background: #f5f8fc;
+}
+
+.suppliers-name {
+    font-weight: 600;
+}
+
+.suppliers-action-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.suppliers-edit-btn {
+    display: inline-block;
+    background: #1f4e78;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.suppliers-edit-btn:hover {
+    background: #163a5b;
+    color: #fff;
+}
+
+.suppliers-delete-form {
+    display: inline-flex;
+    margin: 0;
+}
+
+.suppliers-delete-btn {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.suppliers-delete-btn:hover {
+    background: #b02a37;
+}
+
+.suppliers-empty {
+    text-align: center;
+    padding: 25px !important;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .suppliers-form-card,
+    .suppliers-table-card {
+        padding: 18px;
+    }
+
+    .suppliers-form-actions {
+        flex-wrap: wrap;
+    }
+
+    .suppliers-action-cell {
+        gap: 6px;
+    }
+
+    .suppliers-edit-btn,
+    .suppliers-delete-btn {
+        padding: 7px 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .suppliers-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .suppliers-form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   DELIVERIES PAGE
+========================================= */
+
+.deliveries-page {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.deliveries-page .page-header {
+    margin-bottom: 22px;
+}
+
+.deliveries-page .delivery-form-card,
+.deliveries-page .delivery-history-card {
+    margin-bottom: 25px;
+}
+
+.deliveries-page .delivery-form-card h2,
+.deliveries-page .delivery-history-card h2 {
+    color: #1f4e78;
+    margin-bottom: 10px;
+}
+
+.deliveries-page .section-description {
+    color: #667085;
+    margin-bottom: 22px;
+}
+
+.deliveries-page .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 22px;
+}
+
+.deliveries-page .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.deliveries-page .form-group label {
+    font-weight: 600;
+    color: #344054;
+}
+
+.deliveries-page .form-group input,
+.deliveries-page .form-group select {
+    width: 100%;
+    min-height: 43px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.deliveries-page .form-group input:focus,
+.deliveries-page .form-group select:focus {
+    outline: none;
+    border-color: #1f4e78;
+    box-shadow: 0 0 0 3px rgba(31, 78, 120, 0.12);
+}
+
+.deliveries-page .form-group small {
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.deliveries-page .delivery-form-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.deliveries-page .delivery-form-actions .btn {
+    min-width: 145px;
+}
+
+.deliveries-page .delivery-actions {
+    white-space: nowrap;
+    min-width: 145px;
+}
+
+.deliveries-page .delivery-actions form {
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+
+.deliveries-page .edit-btn,
+.deliveries-page .delete-btn {
+    display: inline-block;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.deliveries-page .edit-btn {
+    background: #1f4e78;
+    color: #fff;
+}
+
+.deliveries-page .edit-btn:hover {
+    background: #163a5b;
+}
+
+.deliveries-page .delete-btn {
+    background: #dc3545;
+    color: #fff;
+}
+
+.deliveries-page .delete-btn:hover {
+    background: #b02a37;
+}
+
+.deliveries-page .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.deliveries-page .table-container table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+}
+
+.deliveries-page .table-container th {
+    background: #1f4e78;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.deliveries-page .table-container td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.deliveries-page .table-container tr:hover td {
+    background: #f8fafc;
+}
+
+.deliveries-page .empty-state {
+    text-align: center;
+    color: #667085;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .deliveries-page .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deliveries-page .delivery-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .deliveries-page .delivery-form-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media print {
+    .deliveries-page .delivery-form-card,
+    .deliveries-page .delivery-actions,
+    .deliveries-page .navbar,
+    .deliveries-page .footer {
+        display: none !important;
+    }
+
+    .deliveries-page .table-container {
+        overflow: visible;
+    }
+
+    .deliveries-page .table-container table {
+        min-width: 0;
+        font-size: 10px;
+    }
+}
+
+/* =====================================
+   PROJECTS MANAGEMENT PAGE
+===================================== */
+
+.projects-page {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.project-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.project-summary .card {
+    text-align: center;
+    border-top: 4px solid #1f4e78;
+}
+
+.project-summary .card h3 {
+    font-size: 15px;
+    color: #555;
+}
+
+.project-summary .card h2 {
+    color: #1f4e78;
+    font-size: 27px;
+    margin-top: 10px;
+}
+
+.project-form {
+    margin-bottom: 25px;
+}
+
+.project-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.project-form-grid .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-form-grid input,
+.project-form-grid select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.project-form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.project-form-actions button,
+.project-edit,
+.project-delete,
+.btn-cancel {
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.project-edit {
+    background: #1f4e78;
+    color: white;
+}
+
+.project-delete {
+    background: #c0392b;
+    color: white;
+}
+
+.btn-cancel {
+    background: #777;
+    color: white;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-actions form {
+    margin: 0;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-status.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.project-status.completed {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.project-status.on_hold {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.projects-page .table-container {
+    overflow-x: auto;
+}
+
+.projects-page table {
+    min-width: 850px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .project-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Projects page error and success messages */
+
+.projects-page .alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 12px 16px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+
+.projects-page .alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 12px 16px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+/* Allocation Edit and Delete Actions */
+.allocations-page .allocation-actions {
+    white-space: nowrap;
+    min-width: 145px;
+}
+
+.allocations-page .allocation-actions .btn {
+    margin: 2px;
+}
+
+.allocations-page .allocation-delete-form {
+    display: inline-block;
+    margin: 0;
+}
+
+.allocations-page .allocation-protected {
+    display: inline-block;
+    padding: 5px 8px;
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffe69c;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.allocations-page .allocation-edit-info {
+    background: #f1f5f9;
+    border: 1px solid #d6e0e9;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+}
+
+.allocations-page .allocation-edit-info p {
+    margin: 6px 0;
+}
+
+/* Usage Edit and Delete Actions */
+.usage-actions {
+    white-space: nowrap;
+    min-width: 145px;
+}
+
+.usage-actions .btn {
+    margin: 2px;
+}
+
+.usage-delete-form {
+    display: inline-block;
+    margin: 0;
+}
+
+.usage-page .usage-actions {
+    white-space: nowrap;
+}

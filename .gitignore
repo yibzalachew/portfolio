@@ -1,0 +1,22 @@
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Local database credentials
+**/config/database.php
+**/includes/db.php
+
+# Dependencies
+node_modules/
+vendor/
+
+# Temporary and system files
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/

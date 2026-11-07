@@ -1,0 +1,16 @@
+Options -Indexes
+
+# Protect sensitive configuration and internal files
+<FilesMatch "^(config|composer\.(json|lock)|\.env|\.git|phpunit\.xml|error_log)">
+    Require all denied
+</FilesMatch>
+
+# Block direct access to sensitive file extensions
+<FilesMatch "\.(ini|log|sql|bak|backup|old|conf|env)$">
+    Require all denied
+</FilesMatch>
+
+# Protect hidden files and folders
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

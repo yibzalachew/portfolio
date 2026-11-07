@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="navbar">
+      <header>Technical Documentation</header><hr>
+      <a href="#what_is_html?" class="nav-link">What is HTML?</a><hr>
+      <a href="#what_is_css?" class="nav-link">What is CSS?</a><hr>
+      <a href="#html_document_structure" class="nav-link">HTML Document Structure</a><hr>
+      <a href="#css_syntax_and_selectors" class="nav-link">CSS Syntax and Selectors</a><hr>
+      <a href="#text_styling_in_css" class="nav-link">Text Styling in CSS</a><hr>
+      <a href="#layout_and_positioning_in_css" class="nav-link">Layout and Positioning in CSS</a><hr>
+      <a href="#responsive_design_and_media_queries" class="nav-link">Responsive Design and Media Queries</a><hr>
+      <a href="#html_forms_and_input_elements" class="nav-link">HTML Forms and Input Elements</a><hr>
+      <a href="#linking_html_and_css" class="nav-link">Linking HTML and CSS</a><hr>
+      <a href="#advanced_css_concepts" class="nav-link">Advanced CSS Concepts</a><hr>
+      <a href="#conclusion" class="nav-link">Conclusion</a><hr>
+    </nav>
+ <main id="main-doc">
+   <section class="main-section" id="what_is_html?">
+       <header>What is HTML?</header>
+       <p>HTML (HyperText Markup Language) is the standard markup language used to create the structure of web pages. It uses a system of tags to define elements on a webpage, such as headings, paragraphs, links, images, tables, and more. HTML is the backbone of a website, providing its essential structure.</p>
+       <p class="sub_title">Key Concepts:</p>
+       <ul>
+           <li>HTML documents are made up of elements, each containing an opening tag, content, and a closing tag.</li>
+           <li>Common HTML elements include <span>&lt;h1&gt;</span>, <span>&lt;p&gt;</span>,<span>&lt;a&gt;</span>, <span>&lt;div&gt;</span>, and <span>&lt;img&gt;</span>.</li>
+       </ul>
+       </section>
+
+   <section class="main-section" id="what_is_css?">
+       <header>What is CSS?</header>
+       <p>CSS (Cascading Style Sheets) is used to style and layout web pages. It controls the visual appearance of HTML elements, such as colors, fonts, spacing, and positioning. With CSS, you can turn a simple HTML page into an attractive, responsive design.</p>
+       <p class="sub_title">Key Concepts:</p>
+       <ul>
+           <li>CSS is usually written in separate files (e.g., <span>styles.css</span>) or embedded within HTML using the <span>&lt;style&gt;</span> tag.</li>
+           <li>You can apply styles to HTML elements using selectors, such as class selectors (.<span>class-name</span>), ID selectors (<span>#id-name</span>), and element selectors (<span>div</span>).</li>
+       </ul>
+       </section>
+
+   <section class="main-section" id="html_document_structure">
+       <header>HTML Document Structure</header>
+       <p>An HTML document has a specific structure, which includes several essential elements. The basic structure typically includes:</p>
+       <ul>
+           <li><span>&lt;!DOCTYPE html&gt;</span> â€“ Declares the document type.</li>
+           <li><span>&lt;html&gt;</span> â€“ Root element of the page.</li>
+           <li><span>&lt;head&gt;</span> â€“ Contains metadata, such as the title, linked stylesheets, and scripts.</li>
+           <li><span>&lt;body&gt;</span> â€“ Contains the visible content of the web page, including text, images, and other elements.</li>
+       </ul>
+        <p class="sub_title">Example:</p>
+<div class="cod">
+       <code>
+           &lt;!DOCTYPE html&gt;<br>
+             &nbsp; &lt;html&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Sample Page&lt;/title&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+              &nbsp;&nbsp;&lt;/html&gt;
+       </code>
+       </div>
+       </section>
+
+   <section class="main-section" id="css_syntax_and_selectors">
+       <header>CSS Syntax and Selectors</header>
+       <p>CSS uses rules to define the appearance of HTML elements. A rule consists of a selector (target element) and a declaration block (style properties).</p>
+       <p class="sub_title">Example:</p>
+  <div class="cod">
+       <code>h1 {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;font-size: 24px;<br>
+&nbsp;&nbsp;&nbsp;}
+        </code>
+        </div>
+         <p class="sub_title">In the above example:</p>
+         <ul>
+             <li><span>h1</span> is the selector</li>
+             <li><span>color: blue;</span> and <span>font-size: 24px;</span> are style declaration</li>
+         </ul>
+       </section>
+
+   <section class="main-section" id="text_styling_in_css">
+       <header>Text Styling in CSS</header>
+       <p>CSS provides various properties to style text, such as:</p>
+       <ul>
+           <li><span>font-family</span>: Specifies the font type.</li>
+           <li><span>font-size</span>: Defines the size of the text.</li>
+           <li><span>color</span>: Changes the text color.</li>
+           <li><span>font-weight</span>: Adjusts the thickness of the font (e.g., bold).</li>
+           <li><span>line-height</span>: Sets the space between lines of text.</li>
+       </ul>
+       <p class="sub_title">Example:</p>
+      <div class="cod">
+       <code>p {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;font-size: 16px;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;color: #333333;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.5;<br>
+&nbsp;&nbsp;&nbsp;}
+     </code>
+       </section>
+
+   <section class="main-section" id="layout_and_positioning_in_css">
+       <header>Layout and Positioning in CSS</header>
+       <p>CSS provides several techniques to position and arrange elements:</p>
+       <ul>
+           <li><span>margin</span>: Creates space outside an element.</li>
+           <li><span>padding</span>: Adds space inside an element.</li>
+           <li><span>position</span>: Controls how elements are positioned (e.g., static, relative, absolute, fixed).</li>
+           <li><span>display</span>: Defines how elements are displayed (e.g., block, inline, flex, grid).</li>
+       </ul>
+       <p class="sub_title">Example:</p>
+       <div class="cod">
+       <code>.container {<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+&nbsp;&nbsp;&nbsp;}
+</div>
+     </code>
+       </section>
+
+   <section class="main-section" id="responsive_design_and_media_queries">
+       <header>Responsive Design and Media Queries</header>
+       <p>Responsive web design ensures that web pages look good on devices of all sizes (e.g., desktop, tablet, mobile). Media queries in CSS allow you to apply styles based on the screen size or device characteristics.</p>
+       <p class="sub_title">Example:</p>
+       <div class="cod">
+       <code>@media screen and (max-width: 600px) {
+  body {
+   &nbsp;&nbsp;&nbsp;&nbsp; font-size: 14px;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}
+</div>
+     </code>
+     <p>In the above example, the font size changes when the screen width is 600px or smaller.</p>
+       </section>
+
+   <section class="main-section" id="html_forms_and_input_elements">
+       <header>HTML Forms and Input Elements</header>
+       <p>HTML forms are used to collect user input, such as text, numbers, or selections. Forms use various input types like <span>&lt;input&gt;</span>, <span>&lt;textarea&gt;</span>, and <span>&lt;select&gt;</span>.</p>
+       <p class="sub_title">Example:</p>
+       <div class="cod">
+       <code>&lt;form action="/submit" method="POST"&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+
+ &nbsp;&nbsp;&nbsp;&nbsp; &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email" name="email"&gt;<br>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;
+     </code>
+     </div>
+       </section>
+
+   <section class="main-section" id="linking_html_and_css">
+       <header>Linking HTML and CSS</header>
+       <p>To apply styles from a CSS file to an HTML document, you can link the CSS file within the  &lt;head&gt; section of the HTML document using the &lt;link&gt; tag.</p>
+       <p class="sub_title">Example:</p>
+       <div class="cod">
+       <code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+     </code>
+     </div>
+     <p>Alternatively, you can use inline styles within individual HTML elements using the <span>style</span> attribute.
+      <p class="sub_title">Example:</p>
+      <div class="cod"
+       <code>&lt;p style="color: red; font-size: 18px;"&gt;This is an inline styled paragraph.&lt;/p&gt;
+     </code>
+     </div>
+       </section>
+
+   <section class="main-section" id="advanced_css_concepts">
+       <header>Advanced CSS Concepts</header>
+       <ul>
+           <li>CSS Transitions and Animations: Allow you to add smooth effects when elements change state (e.g., hover effects).</li>
+           <li>Flexbox and Grid: Layout models that make designing complex layouts easier and more flexible.</li>
+           <li>CSS Variables: Allow you to store values (like colors or font sizes) in reusable variables.</li>
+           <p class="sub_title">Example:</p>
+           <div class="cod"
+       <code>.container {<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; display: flex;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;  justify-content:space-between;<br>
+}
+     </code>
+     </div>
+       </ul>
+       </section>
+
+   <section class="main-section" id="conclusion">
+       <header>Conclusion</header>
+       <p>HTML and CSS are fundamental technologies for web development. HTML provides the structure, while CSS enhances the design and layout. Together, they create interactive, visually appealing, and responsive web pages. Mastering both is crucial for any web developer.</p>
+       </section>
+ </main>
+</body>
+</html>

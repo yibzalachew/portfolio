@@ -1,0 +1,112 @@
+﻿body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+#main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#title h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#img-div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+#img-caption {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+#tribute-info {
+  margin-bottom: 30px;
+}
+
+#tribute-info h2 {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#tribute-info p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+section h2 {
+  font-size: 1.4em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+section ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+section ul li {
+  font-size: 1.1em;
+  color: #555;
+}
+
+blockquote {
+  background-color: #ecf0f1;
+  border-left: 5px solid #3498db;
+  padding: 15px 20px;
+  font-style: italic;
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote footer {
+  text-align: right;
+  font-size: 1em;
+  font-weight: bold;
+  color: #3498db;
+}
+
+#tribute-link {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#tribute-link:hover {
+  background-color: #2980b9;
+  transition: background-color 0.3s ease;
+}
