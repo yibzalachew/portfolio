@@ -1,48 +1,60 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="description" content="Explore the portfolio of Yibzalachew Seifu, a Full-Stack Web Developer from Ethiopia. Discover web applications built with HTML, CSS, JavaScript, PHP, and MySQL, including restaurant ordering and construction material management systems.">
+    <meta name="description"
+        content="Yibzalachew Seifu is a Full-Stack Web Developer and Computer Science graduate from Hawassa University, Ethiopia. Explore his web development projects and skills.">
 
     <meta name="author" content="Yibzalachew Seifu">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0b1120">
-    <meta name="google-site-verification" content="BpzyoC48wFeKN3XrIk_EqYdOVUpKRhoMBq9JAEu6vuI" />
+
     <title>Yibzalachew Seifu | Full-Stack Web Developer</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <link rel="canonical" href="https://yibzalachew.github.io/portfolio/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Yibzalachew Seifu | Full-Stack Web Developer">
-    <meta property="og:description" content="Explore my web development portfolio, practical projects, and technical skills.">
+    <meta property="og:description"
+        content="Explore my web development projects, technical skills, and experience building practical web applications.">
     <meta property="og:url" content="https://yibzalachew.github.io/portfolio/">
-    <meta property="og:image" content="https://yibzalachew.github.io/portfolio/images/p.jpg">
+    <meta property="og:image"
+        content="https://yibzalachew.github.io/portfolio/images/p.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yibzalachew Seifu | Full-Stack Web Developer">
-    <meta name="twitter:description" content="Full-Stack Web Developer portfolio showcasing practical web applications.">
-    <meta name="twitter:image" content="https://yibzalachew.github.io/portfolio/images/p.jpg">
+    <meta name="twitter:description"
+        content="Explore my web development projects and technical skills.">
+    <meta name="twitter:image"
+        content="https://yibzalachew.github.io/portfolio/images/p.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles.css">
-</head>
 
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
 
 <body>
 
@@ -50,75 +62,75 @@
 
     <header class="header">
 
-        <div class="header-container">
+        <div class="container">
 
             <a href="#home" class="logo">
-                <span>Yibzalachew</span>
+                Yibzalachew<span>.</span>
             </a>
 
-            <button
-                class="menu-toggle"
+            <nav class="navbar" id="navbar">
+
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </nav>
+
+            <button class="menu-toggle"
                 id="menu-toggle"
-                aria-label="Open navigation menu"
+                aria-label="Toggle navigation"
                 aria-expanded="false"
-                aria-controls="main-navigation">
+                aria-controls="navbar">
 
                 <i class="fas fa-bars"></i>
 
             </button>
-
-            <nav class="main-navigation" id="main-navigation">
-
-                <a href="#home" class="nav-link active">Home</a>
-
-                <a href="#about" class="nav-link">About</a>
-
-                <a href="#skills" class="nav-link">Skills</a>
-
-                <a href="#projects" class="nav-link">Projects</a>
-
-                <a href="#contact" class="nav-link">Contact</a>
-
-            </nav>
 
         </div>
 
     </header>
 
 
-    <main>
+    <!-- ================= HERO ================= -->
 
-        <!-- ================= HOME / HERO ================= -->
+    <main>
 
         <section class="hero" id="home">
 
-            <div class="hero-container">
+            <div class="container hero-container">
 
                 <div class="hero-content">
 
-                    <p class="hero-greeting">Hello, I'm</p>
+                    <p class="hero-greeting">
+                        Hello, I'm
+                    </p>
 
-                    <h1>Yibzalachew Seifu</h1>
+                    <h1>
+                        Yibzalachew <span>Seifu</span>
+                    </h1>
 
-                    <h2>Full-Stack Web Developer</h2>
+                    <h2>
+                        Full-Stack Web Developer
+                    </h2>
 
                     <p class="hero-description">
                         I am a Computer Science graduate passionate about
-                        building modern, responsive, and user-friendly
+                        building responsive, practical, and user-friendly
                         web applications. I enjoy turning ideas into
-                        practical digital solutions using modern web
+                        functional digital solutions using modern web
                         technologies.
                     </p>
 
                     <div class="hero-buttons">
 
                         <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-code"></i>
-                            View My Projects
+                            Explore My Projects
+                            <i class="fas fa-arrow-right"></i>
                         </a>
 
                         <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
                             Contact Me
                         </a>
 
@@ -127,29 +139,11 @@
                     <div class="social-links">
 
                         <a href="https://github.com/yibzalachew"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="GitHub">
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub">
 
                             <i class="fab fa-github"></i>
-
-                        </a>
-
-                        <a href="https://www.linkedin.com/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="LinkedIn">
-
-                            <i class="fab fa-linkedin"></i>
-
-                        </a>
-
-                        <a href="https://x.com/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           aria-label="X">
-
-                            <i class="fab fa-x-twitter"></i>
 
                         </a>
 
@@ -162,8 +156,9 @@
 
                     <div class="image-decoration"></div>
 
-                    <img src="images/p.jpg"
-                         alt="Portrait of Yibzalachew Seifu">
+                    <img
+                        src="images/p.jpg"
+                        alt="Portrait of Yibzalachew Seifu">
 
                 </div>
 
@@ -172,1317 +167,1387 @@
         </section>
 
 
+        <!-- ================= ABOUT ================= -->
 
-<!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
 
-<section class="about section" id="about">
+            <div class="container">
 
-    <div class="container">
+                <div class="section-heading">
 
-        <div class="section-heading">
+                    <p class="section-subtitle">Get to know me</p>
 
-            <p class="section-subtitle">Get to know me</p>
+                    <h2>About Me</h2>
 
-            <h2>About Me</h2>
+                    <div class="heading-line"></div>
 
-            <div class="heading-line"></div>
-
-            <p>
-                A little about my background, experience,
-                and passion for technology.
-            </p>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <!-- ABOUT TEXT -->
-
-            <div class="about-text">
-
-                <h3>Who Am I?</h3>
-
-                <p>
-                    I am Yibzalachew Seifu, a Computer Science
-                    graduate from Hawassa University, Ethiopia,
-                    with a strong interest in software development
-                    and technology.
-                </p>
-
-                <p>
-                    I focus on full-stack web development,
-                    creating responsive websites and practical
-                    web applications using HTML, CSS, JavaScript,
-                    PHP, and MySQL.
-                </p>
-
-                <p>
-                    Through hands-on projects, I have developed
-                    applications such as a restaurant ordering
-                    system and a construction material allocation
-                    and wastage tracking system. These projects
-                    have helped me strengthen my skills in
-                    frontend development, backend programming,
-                    database management, and problem-solving.
-                </p>
-
-                <p>
-                    I am continuously learning, improving my
-                    technical abilities, and looking for
-                    opportunities to contribute to meaningful
-                    software projects while growing as a developer.
-                </p>
-
-                <a href="#contact" class="btn btn-primary">
-                    Let's Work Together
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-
-            <!-- ABOUT DETAILS -->
-
-            <div class="about-details">
-
-                <div class="detail-item">
-
-                    <i class="fas fa-graduation-cap"></i>
-
-                    <div>
-                        <h4>Education</h4>
-                        <p>BSc in Computer Science</p>
-                    </div>
+                    <p>
+                        A little introduction about my background,
+                        interests, and development journey.
+                    </p>
 
                 </div>
 
 
-                <div class="detail-item">
+                <div class="about-content">
 
-                    <i class="fas fa-university"></i>
+                    <div class="about-text">
 
-                    <div>
-                        <h4>University</h4>
-                        <p>Hawassa University</p>
-                    </div>
+                        <h3>
+                            Building Practical Web Solutions
+                        </h3>
 
-                </div>
+                        <p>
+                            My name is Yibzalachew Seifu. I am a Computer
+                            Science graduate from Hawassa University,
+                            Ethiopia, with a strong interest in web
+                            development and software engineering.
+                        </p>
 
+                        <p>
+                            I enjoy developing websites and web
+                            applications that solve practical problems.
+                            My experience includes working with HTML,
+                            CSS, JavaScript, PHP, and MySQL to create
+                            responsive interfaces and database-driven
+                            applications.
+                        </p>
 
-                <div class="detail-item">
+                        <p>
+                            Through personal and academic projects,
+                            I have developed practical experience in
+                            frontend development, backend programming,
+                            database management, application design,
+                            and debugging.
+                        </p>
 
-                    <i class="fas fa-code"></i>
+                        <p>
+                            My goal is to continue improving my skills
+                            and build reliable, accessible, and
+                            user-friendly applications that provide
+                            real value to users and businesses.
+                        </p>
 
-                    <div>
-                        <h4>Specialization</h4>
-                        <p>Full-Stack Web Development</p>
-                    </div>
-
-                </div>
-
-
-                <div class="detail-item">
-
-                    <i class="fas fa-laptop-code"></i>
-
-                    <div>
-                        <h4>Technologies</h4>
-                        <p>PHP, MySQL, JavaScript, HTML, CSS</p>
-                    </div>
-
-                </div>
-
-
-                <div class="detail-item">
-
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <div>
-                        <h4>Location</h4>
-                        <p>Ethiopia</p>
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- ================= SKILLS ================= -->
+        <!-- ================= SKILLS ================= -->
 
-<section class="skills section" id="skills">
+        <section class="skills section" id="skills">
 
-    <div class="container">
+            <div class="container">
 
-        <div class="section-heading">
+                <div class="section-heading">
 
-            <p class="section-subtitle">My technical expertise</p>
+                    <p class="section-subtitle">
+                        What I work with
+                    </p>
 
-            <h2>My Skills</h2>
+                    <h2>Technical Skills</h2>
 
-            <div class="heading-line"></div>
+                    <div class="heading-line"></div>
 
-            <p>
-                Technologies and tools I use to design,
-                develop, and manage web applications.
-            </p>
+                    <p>
+                        Technologies and tools I use to build
+                        web applications.
+                    </p>
 
-        </div>
-
-
-        <div class="skills-grid">
+                </div>
 
 
-            <!-- FRONTEND SKILLS -->
+                <div class="skills-grid">
 
-            <div class="skill-card">
+                    <div class="skill-card">
 
-                <i class="fab fa-html5"></i>
+                        <i class="fab fa-html5"></i>
 
-                <h3>HTML5</h3>
+                        <h3>HTML5</h3>
 
-                <p>
-                    Creating structured, accessible,
-                    and semantic web pages.
-                </p>
+                        <p>
+                            Creating structured and accessible
+                            web page content.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-css3-alt"></i>
+
+                        <h3>CSS3</h3>
+
+                        <p>
+                            Designing responsive layouts,
+                            animations, and modern interfaces.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-js"></i>
+
+                        <h3>JavaScript</h3>
+
+                        <p>
+                            Building interactive web applications
+                            and dynamic user experiences.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-php"></i>
+
+                        <h3>PHP</h3>
+
+                        <p>
+                            Developing server-side functionality
+                            and database-driven applications.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fas fa-database"></i>
+
+                        <h3>MySQL</h3>
+
+                        <p>
+                            Designing databases and managing
+                            application data.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-git-alt"></i>
+
+                        <h3>Git & GitHub</h3>
+
+                        <p>
+                            Managing source code, tracking changes,
+                            and collaborating on projects.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fab fa-bootstrap"></i>
+
+                        <h3>Bootstrap</h3>
+
+                        <p>
+                            Building responsive interfaces using
+                            reusable UI components.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <i class="fas fa-mobile-alt"></i>
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Creating websites that work across
+                            desktop, tablet, and mobile devices.
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
 
-
-            <div class="skill-card">
-
-                <i class="fab fa-css3-alt"></i>
-
-                <h3>CSS3</h3>
-
-                <p>
-                    Designing responsive layouts,
-                    styling interfaces, and improving
-                    user experiences.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <i class="fab fa-js"></i>
-
-                <h3>JavaScript</h3>
-
-                <p>
-                    Building interactive web features
-                    and dynamic user interfaces.
-                </p>
-
-            </div>
-
-
-            <!-- BACKEND SKILLS -->
-
-            <div class="skill-card">
-
-                <i class="fab fa-php"></i>
-
-                <h3>PHP</h3>
-
-                <p>
-                    Developing server-side functionality
-                    and dynamic web applications.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <i class="fas fa-database"></i>
-
-                <h3>MySQL</h3>
-
-                <p>
-                    Designing relational databases,
-                    managing records, and writing SQL queries.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <i class="fab fa-bootstrap"></i>
-
-                <h3>Bootstrap</h3>
-
-                <p>
-                    Building responsive interfaces
-                    using a frontend framework.
-                </p>
-
-            </div>
-
-
-            <!-- DEVELOPMENT TOOLS -->
-
-            <div class="skill-card">
-
-                <i class="fab fa-git-alt"></i>
-
-                <h3>Git</h3>
-
-                <p>
-                    Tracking code changes and managing
-                    development versions.
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <i class="fab fa-github"></i>
-
-                <h3>GitHub</h3>
-
-                <p>
-                    Hosting source code, maintaining
-                    repositories, and showcasing projects.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
         <!-- ================= PROJECTS ================= -->
 
+        <section class="projects section" id="projects">
 
-<section class="projects section" id="projects">
+            <div class="container">
 
-    <div class="container">
+                <div class="section-heading">
 
-        <!-- SECTION HEADING -->
-        <div class="section-heading">
-
-            <p class="section-subtitle">My recent work</p>
-
-            <h2>My Projects</h2>
-
-            <div class="heading-line"></div>
-
-            <p>
-                Explore my web development projects, including
-                full-stack applications, responsive websites,
-                JavaScript applications, and data visualization
-                projects.
-            </p>
-
-        </div>
-
-
-        <!-- =====================================
-             FEATURED FULL-STACK PROJECTS
-        ====================================== -->
-
-        <h3 class="projects-category">
-            Featured Full-Stack Projects
-        </h3>
-
-        <div class="featured-projects">
-
-            <!-- ZEST RESTAURANT ORDERING SYSTEM -->
-
-            <article class="project-card featured-project">
-
-                <div class="project-image">
-
-                    <img
-                        src="images/Zest Restaurant Ordering System.png"
-                        alt="Zest Restaurant Ordering System dashboard and interface"
-                        loading="lazy"
-                    >
-
-                </div>
-
-                <div class="project-info">
-
-                    <span class="project-label">
-                        Full-Stack Web Application
-                    </span>
-
-                    <h3>Zest Restaurant Ordering System</h3>
-
-                    <p>
-    A full-stack restaurant ordering and management
-    application developed for Zest Restaurant in Hawassa,
-    Ethiopia. Customers can browse food menus, add items
-    to their cart, place pickup or delivery orders, submit
-    payment references, and track their orders.
-
-    The admin dashboard supports food and category
-    management, order processing, payment verification,
-    restaurant settings, and sales reports.
-</p>
-
-                    <div class="project-tech">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>JavaScript</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                    </div>
-<div class="project-links">
-
-    <a
-        href="https://github.com/yibzalachew/zest-restaurant-ordering-system"
-        class="project-link"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <i class="fab fa-github"></i>
-        View Source Code
-    </a>
-
-</div>
-
-                </div>
-
-            </article>
-
-
-            <!-- CONSTRUCTION MATERIAL MANAGEMENT SYSTEM -->
-
-            <article class="project-card featured-project">
-
-                <div class="project-image">
-
-                    <img
-                        src="images/construction_material.png"
-                        alt="Construction Material Allocation and Wastage Tracking System interface"
-                        loading="lazy"
-                    >
-
-                </div>
-
-                <div class="project-info">
-
-                    <span class="project-label">
-                        Full-Stack Management System
-                    </span>
-
-                    <h3>
-                        Construction Material Allocation
-                        and Wastage Tracking System
-                    </h3>
-
-                    <p>
-    A web-based construction site material management
-    system designed to improve inventory control and
-    reduce material wastage.
-
-    The application manages material receipts, stock
-    balances, material allocation, site usage, wastage
-    recording and approval, low-stock monitoring, and
-    management reports. It supports different user roles
-    for construction site operations.
-</p>
-
-                    <div class="project-tech">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>JavaScript</span>
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                    </div>
-
-                    <div class="project-links">
-
-    <a
-        href="https://github.com/yibzalachew/portfolio/tree/main/construction-material-system"
-        class="project-link"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <i class="fab fa-github"></i>
-        View Source Code
-    </a>
-
-</div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <!-- =====================================
-             RESPONSIVE WEB DESIGN PROJECTS
-        ====================================== -->
-
-        <h3 class="projects-category">
-            Responsive Web Design Projects
-        </h3>
-
-        <div class="projects-grid">
-
-            <!-- PROJECT 1 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p1.png"
-                    alt="Survey Form project screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Survey Form</h3>
-
-                    <p>
-                        A responsive survey form featuring structured
-                        input fields and user-friendly form elements.
+                    <p class="section-subtitle">
+                        My work
                     </p>
 
-                    <a
-                        href="Survey_Form/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
+                    <h2>My Projects</h2>
 
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 2 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p2.png"
-                    alt="Tribute Page project screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Tribute Page</h3>
+                    <div class="heading-line"></div>
 
                     <p>
-                        A tribute webpage presenting information
-                        through a clean and organized layout.
+                        A collection of practical web development
+                        projects demonstrating my skills in frontend
+                        development, backend programming, and data
+                        visualization.
                     </p>
-
-                    <a
-                        href="Tribute_page/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
 
                 </div>
 
-            </article>
 
+                <!-- FEATURED FULL-STACK PROJECTS -->
 
-            <!-- PROJECT 3 -->
+                <div class="project-category">
 
-            <article class="project-card">
-
-                <img
-                    src="images/p3.png"
-                    alt="Technical Documentation project screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Technical Documentation</h3>
+                    <h3>Featured Full-Stack Projects</h3>
 
                     <p>
-                        A documentation website with structured
-                        sections and navigation for technical content.
+                        Complete applications developed to address
+                        practical business and organizational needs.
                     </p>
-
-                    <a
-                        href="Technical_Documentation/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
 
                 </div>
 
-            </article>
+
+                <div class="projects-grid">
 
 
-            <!-- PROJECT 4 -->
+                    <!-- ZEST RESTAURANT -->
 
-            <article class="project-card">
+                    <article class="project-card featured-project">
 
-                <img
-                    src="images/p4.png"
-                    alt="Product Landing Page project screenshot"
-                    loading="lazy"
-                >
+                        <div class="project-image">
 
-                <div class="project-info">
+                            <img
+                                src="images/Zest Restaurant Ordering System.png"
+                                alt="Zest Restaurant Ordering System screenshot"
+                                loading="lazy">
 
-                    <h3>Product Landing Page</h3>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-label">
+                                Full-Stack Web Application
+                            </span>
+
+                            <h3>
+                                Zest Restaurant Ordering System
+                            </h3>
+
+                            <p>
+                                A restaurant ordering and management
+                                application developed for Zest Restaurant.
+                                Customers can browse food items, add
+                                products to a cart, place pickup or
+                                delivery orders, submit payment references,
+                                and track their orders. Administrators
+                                can manage food items, categories,
+                                customer orders, payments, and reports.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://github.com/yibzalachew/zest-restaurant-ordering-system"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+
+                                    <i class="fab fa-github"></i>
+                                    View Source Code
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CONSTRUCTION MATERIAL SYSTEM -->
+
+                    <article class="project-card featured-project">
+
+                        <div class="project-image">
+
+                            <img
+                                src="images/construction_material.png"
+                                alt="Construction Material Allocation and Wastage Tracking System screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-label">
+                                Full-Stack Web Application
+                            </span>
+
+                            <h3>
+                                Construction Material Allocation
+                                and Wastage Tracking System
+                            </h3>
+
+                            <p>
+                                A construction site management
+                                application designed to monitor
+                                material stock, allocation, usage,
+                                and wastage. It supports material
+                                tracking and reporting to help
+                                construction teams manage resources
+                                and improve accountability.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <div class="project-links">
+
+                                <a
+                                    href="https://github.com/yibzalachew/portfolio/tree/main/construction-material-system"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+
+                                    <i class="fab fa-github"></i>
+                                    View Source Code
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- RESPONSIVE WEB DESIGN PROJECTS -->
+
+                <div class="project-category">
+
+                    <h3>Responsive Web Design Projects</h3>
 
                     <p>
-                        A product presentation website designed
-                        to showcase features and communicate
-                        product information clearly.
+                        Projects demonstrating page structure,
+                        responsive layouts, forms, and user interface
+                        design using HTML and CSS.
                     </p>
-
-                    <a
-                        href="Product_Landing/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
 
                 </div>
 
-            </article>
 
-        </div>
+                <div class="projects-grid">
 
 
-        <!-- =====================================
-             JAVASCRIPT APPLICATIONS
-        ====================================== -->
+                    <!-- SURVEY FORM -->
 
-        <h3 class="projects-category">
-            JavaScript Applications
-        </h3>
+                    <article class="project-card">
 
-        <div class="projects-grid">
+                        <div class="project-image">
 
-            <!-- PROJECT 5 -->
+                            <img src="images/p1.png"
+                                alt="Survey Form project screenshot"
+                                loading="lazy">
 
-            <article class="project-card">
+                        </div>
 
-                <img
-                    src="images/p5.png"
-                    alt="Palindrome Checker screenshot"
-                    loading="lazy"
-                >
+                        <div class="project-content">
 
-                <div class="project-info">
+                            <h3>Survey Form</h3>
 
-                    <h3>Palindrome Checker</h3>
+                            <p>
+                                A responsive survey form that collects
+                                user information and feedback through
+                                structured input fields, labels,
+                                and form controls.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Survey_Form/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TRIBUTE PAGE -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p2.png"
+                                alt="Tribute Page project screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Tribute Page</h3>
+
+                            <p>
+                                A tribute webpage presenting
+                                information about an individual
+                                through organized content,
+                                images, and a structured layout.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Tribute_page/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TECHNICAL DOCUMENTATION -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p3.png"
+                                alt="Technical Documentation project screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Technical Documentation</h3>
+
+                            <p>
+                                A documentation webpage with
+                                organized sections and navigation
+                                to make technical information
+                                easier to read and understand.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Technical_Documentation/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT LANDING PAGE -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p4.png"
+                                alt="Product Landing Page project screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Product Landing Page</h3>
+
+                            <p>
+                                A product presentation website
+                                designed to communicate product
+                                features, highlight benefits,
+                                and guide visitors through
+                                a clear page layout.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Product_Landing/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- JAVASCRIPT PROJECTS -->
+
+                <div class="project-category">
+
+                    <h3>JavaScript Applications</h3>
 
                     <p>
-                        A JavaScript application that checks whether
-                        a word or phrase reads the same forward
-                        and backward.
+                        Interactive applications demonstrating
+                        JavaScript logic, event handling,
+                        data processing, and dynamic interfaces.
                     </p>
-
-                    <a
-                        href="Palindrome_Checker/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
 
                 </div>
 
-            </article>
+
+                <div class="projects-grid">
 
 
-            <!-- PROJECT 6 -->
+                    <!-- PALINDROME CHECKER -->
 
-            <article class="project-card">
+                    <article class="project-card">
 
-                <img
-                    src="images/p6.png"
-                    alt="Roman Numeral Converter screenshot"
-                    loading="lazy"
-                >
+                        <div class="project-image">
 
-                <div class="project-info">
+                            <img src="images/p5.png"
+                                alt="Palindrome Checker screenshot"
+                                loading="lazy">
 
-                    <h3>Roman Numeral Converter</h3>
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Palindrome Checker</h3>
+
+                            <p>
+                                A JavaScript application that checks
+                                whether a word or phrase reads the
+                                same forward and backward while
+                                handling spaces, punctuation,
+                                and letter casing.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Palindrome_Checker/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ROMAN NUMERAL CONVERTER -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p6.png"
+                                alt="Roman Numeral Converter screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Roman Numeral Converter</h3>
+
+                            <p>
+                                A number conversion application
+                                that transforms decimal numbers
+                                into their corresponding Roman
+                                numeral representations using
+                                JavaScript logic.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Roman_Numeral_Converter/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TELEPHONE NUMBER VALIDATOR -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p7.png"
+                                alt="Telephone Number Validator screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Telephone Number Validator</h3>
+
+                            <p>
+                                A validation tool that checks
+                                telephone number formats using
+                                JavaScript and regular expressions
+                                to identify valid and invalid
+                                input patterns.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="Telephone_Number_Validator/index.html"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RANDOM QUOTE MACHINE -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p10.png"
+                                alt="Random Quote Machine screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Random Quote Machine</h3>
+
+                            <p>
+                                An interactive application that
+                                displays random quotations and
+                                allows users to generate new
+                                quotes through simple interface
+                                interactions.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/zxOMaNb"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MARKDOWN PREVIEWER -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p11.png"
+                                alt="Markdown Previewer screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Markdown Previewer</h3>
+
+                            <p>
+                                A text editor that converts Markdown
+                                input into a formatted preview,
+                                helping users see how their
+                                Markdown content will appear.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/emObdXV"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DRUM MACHINE -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p12.png"
+                                alt="Drum Machine screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Drum Machine</h3>
+
+                            <p>
+                                An interactive drum pad application
+                                that lets users trigger sound
+                                samples using clickable pads
+                                and keyboard controls.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/EaYrjVp"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JAVASCRIPT CALCULATOR -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p13.png"
+                                alt="JavaScript Calculator screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>JavaScript Calculator</h3>
+
+                            <p>
+                                A functional calculator that
+                                performs arithmetic operations
+                                through an interactive interface
+                                and JavaScript-based calculations.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/ogvJbKO"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POMODORO CLOCK -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p14.png"
+                                alt="Pomodoro Clock screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Pomodoro Clock</h3>
+
+                            <p>
+                                A productivity timer based on the
+                                Pomodoro technique, allowing users
+                                to manage work sessions and breaks
+                                with adjustable countdown controls.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/LEPqjBm"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- DATA VISUALIZATION PROJECTS -->
+
+                <div class="project-category">
+
+                    <h3>Data Visualization Projects</h3>
 
                     <p>
-                        A JavaScript tool that converts numbers
-                        into their corresponding Roman numeral
-                        representations.
+                        Projects that use visual representations
+                        to explore, present, and understand
+                        structured datasets.
                     </p>
-
-                    <a
-                        href="Roman_Numeral_Converter/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
 
                 </div>
 
-            </article>
+
+                <div class="projects-grid">
 
 
-            <!-- PROJECT 7 -->
+                    <!-- BAR CHART -->
 
-            <article class="project-card">
+                    <article class="project-card">
 
-                <img
-                    src="images/p7.png"
-                    alt="Telephone Number Validator screenshot"
-                    loading="lazy"
-                >
+                        <div class="project-image">
 
-                <div class="project-info">
+                            <img src="images/p15.png"
+                                alt="Bar Chart visualization screenshot"
+                                loading="lazy">
 
-                    <h3>Telephone Number Validator</h3>
+                        </div>
 
-                    <p>
-                        A JavaScript application that validates
-                        telephone numbers using input checking
-                        and regular expressions.
-                    </p>
+                        <div class="project-content">
 
-                    <a
-                        href="Telephone_Number_Validator/index.html"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
+                            <h3>Bar Chart</h3>
+
+                            <p>
+                                A data visualization project that
+                                presents information using
+                                horizontal or vertical bars
+                                to compare values across
+                                different categories.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>D3.js</span>
+                                <span>SVG</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/JoPzdJm"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SCATTER PLOT GRAPH -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p16.png"
+                                alt="Scatter Plot Graph screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Scatter Plot Graph</h3>
+
+                            <p>
+                                A graphical representation of
+                                paired numerical data that
+                                helps reveal relationships,
+                                patterns, and distributions
+                                between two variables.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>D3.js</span>
+                                <span>SVG</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/GgKeyaz"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- HEAT MAP -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p17.png"
+                                alt="Heat Map visualization screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Heat Map</h3>
+
+                            <p>
+                                A visualization that uses color
+                                intensity to represent values
+                                across a dataset, making it
+                                easier to identify patterns
+                                and differences.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>D3.js</span>
+                                <span>SVG</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/emOXMWb"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CHOROPLETH MAP -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p18.png"
+                                alt="Choropleth Map screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Choropleth Map</h3>
+
+                            <p>
+                                A geographic data visualization
+                                that uses different color shades
+                                to show how a measured value
+                                varies across geographic regions.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>D3.js</span>
+                                <span>GeoJSON</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/GgKedMB"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TREE MAP -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img src="images/p19.png"
+                                alt="Tree Map visualization screenshot"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>Tree Map</h3>
+
+                            <p>
+                                A hierarchical visualization
+                                that represents data through
+                                nested rectangles, with each
+                                rectangle showing a category
+                                or part of a dataset.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>D3.js</span>
+                                <span>SVG</span>
+                            </div>
+
+                            <div class="project-links">
+
+                                <a href="https://codepen.io/Yibzalachew-Seifu/pen/raBRvQW"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-btn">
+                                    View Project
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
-            </article>
+            </div>
 
-
-            <!-- PROJECT 8 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p10.png"
-                    alt="Random Quote Machine screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Random Quote Machine</h3>
-
-                    <p>
-                        An interactive application that displays
-                        random inspirational quotes.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/zxOMaNb"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 9 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p11.png"
-                    alt="Markdown Previewer screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Markdown Previewer</h3>
-
-                    <p>
-                        A tool for writing Markdown text and
-                        displaying its formatted preview.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/emObdXV"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 10 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p12.png"
-                    alt="Drum Machine screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Drum Machine</h3>
-
-                    <p>
-                        An interactive drum machine that allows
-                        users to trigger different sound effects.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/EaYrjVp"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 11 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p13.png"
-                    alt="JavaScript Calculator screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>JavaScript Calculator</h3>
-
-                    <p>
-                        A functional calculator that performs
-                        basic arithmetic operations using JavaScript.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/ogvJbKO"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 12 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p14.png"
-                    alt="Pomodoro Clock screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Pomodoro Clock</h3>
-
-                    <p>
-                        A productivity timer that helps users
-                        organize work and break sessions.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/LEPqjBm"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <!-- =====================================
-             DATA VISUALIZATION PROJECTS
-        ====================================== -->
-
-        <h3 class="projects-category">
-            Data Visualization Projects
-        </h3>
-
-        <div class="projects-grid">
-
-            <!-- PROJECT 13 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p15.png"
-                    alt="Bar Chart screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Bar Chart</h3>
-
-                    <p>
-                        A data visualization project that presents
-                        information through a bar chart.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/JoPzdJm"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 14 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p16.png"
-                    alt="Scatter Plot Graph screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Scatter Plot Graph</h3>
-
-                    <p>
-                        A data visualization application that
-                        displays relationships between data points.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/GgKeyaz"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 15 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p17.png"
-                    alt="Heat Map screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Heat Map</h3>
-
-                    <p>
-                        A visualization that uses color intensity
-                        to represent patterns and variations in data.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/emOXMWb"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 16 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p18.png"
-                    alt="Choropleth Map screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Choropleth Map</h3>
-
-                    <p>
-                        A geographical data visualization project
-                        that represents regional data using colors.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/GgKedMB"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 17 -->
-
-            <article class="project-card">
-
-                <img
-                    src="images/p19.png"
-                    alt="Tree Map screenshot"
-                    loading="lazy"
-                >
-
-                <div class="project-info">
-
-                    <h3>Tree Map</h3>
-
-                    <p>
-                        A hierarchical data visualization that
-                        displays information through nested rectangles.
-                    </p>
-
-                    <a
-                        href="https://codepen.io/Yibzalachew-Seifu/pen/raBRvQW"
-                        class="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Project
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
+        </section>
 
 
         <!-- ================= CONTACT ================= -->
 
+        <section class="contact section" id="contact">
 
-<!-- ================= CONTACT ================= -->
+            <div class="container">
 
-<section class="contact section" id="contact">
+                <div class="section-heading">
 
-    <div class="container">
+                    <p class="section-subtitle">
+                        Get in touch
+                    </p>
 
-        <div class="section-heading">
+                    <h2>Contact Me</h2>
 
-            <p class="section-subtitle">Let's connect</p>
+                    <div class="heading-line"></div>
 
-            <h2>Get In Touch</h2>
-
-            <div class="heading-line"></div>
-
-            <p>
-                Looking for a web developer for your next project?
-                Have a job opportunity or collaboration in mind?
-                I'd be happy to hear from you.
-            </p>
-
-        </div>
-
-
-        <div class="contact-content">
-
-            <!-- CONTACT INFORMATION -->
-
-            <div class="contact-info">
-
-                <div class="contact-item">
-
-                    <i class="fas fa-envelope"></i>
-
-                    <div>
-
-                        <h3>Email</h3>
-
-                        <a href="mailto:yibzalachewseifu5@gmail.com">
-                            yibzalachewseifu5@gmail.com
-                        </a>
-
-                    </div>
+                    <p>
+                        Have a project, job opportunity, or collaboration
+                        in mind? Feel free to contact me.
+                    </p>
 
                 </div>
 
 
-                <div class="contact-item">
+                <div class="contact-content">
 
-                    <i class="fas fa-phone"></i>
+                    <div class="contact-info">
 
-                    <div>
+                        <div class="contact-item">
 
-                        <h3>Phone</h3>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
 
-                        <a href="tel:+251964740703">
-                            +251 964 740 703
-                        </a>
+                            <div>
+
+                                <h3>Email</h3>
+
+                                <a href="mailto:yibzalachewseifu5@gmail.com">
+                                    yibzalachewseifu5@gmail.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>Phone</h3>
+
+                                <a href="tel:+251964740703">
+                                    +251 964 740 703
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>WhatsApp</h3>
+
+                                <a
+                                    href="https://wa.me/qr/7YKLIL7VPEMQK1"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Chat with me on WhatsApp
+
+                                </a>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
-                </div>
 
+                    <div class="contact-social">
 
-                <div class="contact-item">
+                        <h3>Connect With Me</h3>
 
-                    <i class="fas fa-map-marker-alt"></i>
+                        <p>
+                            Explore my source code, follow my development
+                            projects, and connect with me on GitHub.
+                        </p>
 
-                    <div>
+                        <div class="social-links">
 
-                        <h3>Location</h3>
+                            <a href="https://github.com/yibzalachew"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub">
 
-                        <p>Ethiopia</p>
+                                <i class="fab fa-github"></i>
+
+                            </a>
+
+                            <a
+                                href="https://wa.me/qr/7YKLIL7VPEMQK1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="WhatsApp">
+
+                                <i class="fab fa-whatsapp"></i>
+
+                            </a>
+
+                        </div>
 
                     </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <i class="fab fa-whatsapp"></i>
-
-                    <div>
-
-                        <h3>WhatsApp</h3>
-
-                        <a
-                            href="https://wa.me/qr/7YKLIL7VPEMQK1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Chat with me on WhatsApp
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- EMAIL BUTTON -->
-
-                <a
-                    href="mailto:yibzalachewseifu5@gmail.com?subject=Project%20Inquiry"
-                    class="btn btn-primary"
-                >
-                    <i class="fas fa-paper-plane"></i>
-                    Send Me an Email
-                </a>
-
-            </div>
-
-
-            <!-- SOCIAL MEDIA -->
-
-            <div class="contact-social">
-
-                <h3>Connect With Me</h3>
-
-                <p>
-                    Follow my work, explore my projects,
-                    and connect with me professionally.
-                </p>
-
-
-                <div class="social-links">
-
-                    <!-- GITHUB -->
-
-                    <a
-                        href="https://github.com/yibzalachew"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub"
-                        title="GitHub"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-
-
-                    <!-- LINKEDIN: REPLACE WITH YOUR PROFILE URL -->
-
-                    <a
-                        href="https://www.linkedin.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                        title="LinkedIn"
-                    >
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-
-                    <!-- X: REPLACE WITH YOUR PROFILE URL -->
-
-                    <a
-                        href="https://x.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="X"
-                        title="X"
-                    >
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-
-
-                    <!-- TIKTOK: REPLACE WITH YOUR PROFILE URL -->
-
-                    <a
-                        href="https://www.tiktok.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="TikTok"
-                        title="TikTok"
-                    >
-                        <i class="fab fa-tiktok"></i>
-                    </a>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
-
+        </section>
 
     </main>
 
 
+    <!-- ================= FOOTER ================= -->
 
-<!-- ================= FOOTER ================= -->
+    <footer class="footer">
 
-<footer class="footer">
+        <div class="container">
 
-    <div class="footer-container">
+            <a href="#home" class="footer-logo">
+                Yibzalachew<span>.</span>
+            </a>
 
-        <div class="footer-content">
-
-            <div class="footer-info">
-
-                <a href="#home" class="logo">
-                    Yibzalachew<span>.</span>
-                </a>
-
-                <p>
-                    Full-Stack Web Developer | Building Practical Web Applications
-                </p>
-
-            </div>
+            <p>
+                Full-Stack Web Developer | Building Practical Web Applications
+            </p>
 
             <div class="footer-social">
 
-                <a
-                    href="https://github.com/yibzalachew"
+                <a href="https://github.com/yibzalachew"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    title="GitHub"
-                >
+                    aria-label="GitHub">
+
                     <i class="fab fa-github"></i>
+
                 </a>
 
             </div>
 
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>
-                &copy; <span id="current-year"></span>
-                Yibzalachew Seifu. All Rights Reserved.
+            <p class="copyright">
+                &copy; 2026 Yibzalachew Seifu. All Rights Reserved.
             </p>
 
-            <a href="#home" class="back-to-top">
-                Back to Top
-                <i class="fas fa-arrow-up"></i>
-            </a>
-
         </div>
 
-    </div>
-
-</footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    </footer>
 
 </body>
+
 </html>
